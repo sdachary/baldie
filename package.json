@@ -1,0 +1,31 @@
+{
+  "name": "baldie",
+  "version": "1.0.0",
+  "description": "Free-tier-first DevOps advisor. Recommend the free or always-free option first; pay for usage, not guessing.",
+  "keywords": ["opencode-plugin", "opencode", "baldie", "skills", "devops", "free-tier", "cost-optimization", "cloud-costs"],
+  "license": "MIT",
+  "author": {
+    "name": "S Deepak Achary",
+    "url": "https://github.com/sdachary"
+  },
+  "homepage": "https://github.com/sdachary/baldie",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdachary/baldie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sdachary/baldie/issues"
+  },
+  "main": "./.opencode/plugin/baldie.mjs",
+  "exports": {
+    ".": "./.opencode/plugin/baldie.mjs",
+    "./plugin": "./.opencode/plugin/baldie.mjs"
+  },
+  "files": ["AGENTS.md", "skills/", ".opencode/", "LICENSE", "README.md"],
+  "scripts": {
+    "test": "node -e \"const fs=require('fs');['skills/baldie/SKILL.md','skills/baldie-audit/SKILL.md','skills/baldie-scale/SKILL.md','skills/baldie-help/SKILL.md','AGENTS.md'].forEach(f=>{if(!fs.existsSync(f))throw new Error('missing '+f)});console.log('baldie files ok')\""
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
