@@ -1,0 +1,6 @@
+{
+  "name": "baldie",
+  "version": "1.0.0",
+  "description": "Free-tier-first DevOps advisor. Recommend the free or always-free option first; pay for usage, not guessing, sized to measured needs with an upgrade trigger.",
+  "contextFileName": "AGENTS.md"
+}

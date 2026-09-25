@@ -19,11 +19,22 @@
   "main": "./.opencode/plugin/baldie.mjs",
   "exports": {
     ".": "./.opencode/plugin/baldie.mjs",
-    "./plugin": "./.opencode/plugin/baldie.mjs"
+    "./plugin": "./.opencode/plugin/baldie.mjs",
+    "./pi": "./pi-extension/index.js",
+    "./hooks/*": "./hooks/*"
   },
-  "files": ["AGENTS.md", "skills/", ".opencode/", "LICENSE", "README.md"],
+  "files": [
+    "AGENTS.md",
+    "skills/",
+    "hooks/",
+    ".opencode/",
+    "pi-extension/",
+    "gemini-extension.json",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
-    "test": "node -e \"const fs=require('fs');['skills/baldie/SKILL.md','skills/baldie-audit/SKILL.md','skills/baldie-scale/SKILL.md','skills/baldie-help/SKILL.md','AGENTS.md'].forEach(f=>{if(!fs.existsSync(f))throw new Error('missing '+f)});console.log('baldie files ok')\""
+    "test": "node -e \"const fs=require('fs');['skills/baldie/SKILL.md','skills/baldie-audit/SKILL.md','skills/baldie-scale/SKILL.md','skills/baldie-help/SKILL.md','AGENTS.md','hooks/baldie-config.js','hooks/baldie-runtime.js','hooks/baldie-instructions.js','hooks/baldie-activate.js','hooks/baldie-mode-tracker.js','hooks/baldie-subagent.js','gemini-extension.json'].forEach(f=>{if(!fs.existsSync(f))throw new Error('missing '+f)});console.log('baldie files ok')\" && (cd pi-extension && npm test --silent) && node hooks/baldie-activate.js | grep -q 'BALDIE MODE ACTIVE' && node hooks/baldie-subagent.js | grep -q 'BALDIE MODE ACTIVE' && echo 'hooks smoke ok'"
   },
   "publishConfig": {
     "access": "public"

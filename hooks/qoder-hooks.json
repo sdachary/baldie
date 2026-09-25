@@ -1,0 +1,26 @@
+{
+  "_comment": "Reference template — copy the 'hooks' object into your .qoder/settings.json or ~/.qoder/settings.json. Replace BALDIE_DIR with the path to your baldie checkout (e.g. ~/.qoder/plugins/baldie).",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node BALDIE_DIR/hooks/baldie-mode-tracker.js"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "task|Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node BALDIE_DIR/hooks/baldie-subagent.js"
+          }
+        ]
+      }
+    ]
+  }
+}
