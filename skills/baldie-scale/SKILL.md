@@ -17,7 +17,8 @@ Upgrades happen on measured numbers, not gut feel.
 ## Method
 
 1. Establish measured reality first. Ask: current usage (requests/rows/users/bandwidth), observed peaks, growth direction. If the user has no numbers, say so and ask for them or for a way to get them — never size from vibes.
-2. Find the smallest paid tier that covers measured reality plus a sane headroom margin (2–3× typical, not 10× "what if we blow up").
+2. Consult the baldie registry `data/free-tier.json` for the service's stated free ceiling before agreeing to any paid tier — if measured usage fits the free tier, say "stay free".
+3. Find the smallest paid tier that covers measured reality plus a sane headroom margin (2–3× typical, not 10× "what if we blow up").
 3. Recommend that tier explicitly: name it, name the metric that would force the next step up, and set a review date.
 4. If the need fits the free tier under the rules — say "stay free" and name the limit in a sentence.
 

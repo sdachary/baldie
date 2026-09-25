@@ -121,6 +121,38 @@ Switch mid-session: `/baldie lite`, `/baldie full`, `/baldie ultra`, or
 { "defaultMode": "ultra" }
 ```
 
+## The source of truth (auto-refreshed weekly)
+
+Baldie is not a static ruleset — it ships a living registry of free /
+free-tier / self-hostable services that agents are told to consult before
+recommending anything:
+
+```
+data/free-tier.json      curated registry: service -> free offer, ceiling, status, last_verified
+data/seen.json           observation log (what upstream lists, when first/last seen)
+data/changelog.md        weekly diff: new upstream entries, possibly-gone free tiers
+```
+
+Every Monday 06:00 UTC a GitHub Action
+(`.github/workflows/refresh-free-tier.yml`, free minutes on this public repo)
+reads two upstream lists at run time — [free-for-dev](https://github.com/ripienaar/free-for-dev)
+and [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) —
+diffs them against the observed history, restamps `last_verified` on still-live
+entries, and flags entries that vanish for two consecutive runs as candidates
+for "free tier ended". The lists themselves are never committed (both upstream
+projects carry licenses that restrict redistribution); only baldie's own
+facts go in the repo.
+
+What the three statuses mean to an agent:
+
+- `live` + `last_verified` — currently observed upstream, current.
+- `live` + no date — human-curated, unverified; check the price page before quoting numbers.
+- `flagged` — gone from upstream for 2+ refreshes; free tier likely ended, say so.
+
+Run the refresh yourself anytime: `node scripts/refresh-free-tier.js`
+(stdlib only, no deps). It writes `changelog.md` and updates the registry;
+commit the diff if you want it persisted.
+
 ## The skills
 
 - `baldie` — the advisor itself; active every response.
@@ -133,6 +165,9 @@ Switch mid-session: `/baldie lite`, `/baldie full`, `/baldie ultra`, or
 ```
 AGENTS.md                    ruleset any agent can read natively (zero-install path)
 skills/baldie*/SKILL.md      full skill definitions for opencode, pi, antigravity
+data/                        living free-tier registry + weekly changelog (see above)
+scripts/refresh-free-tier.js stdlib refresh (¬deps) — diffs upstream lists vs our data
+.github/workflows/           weekly auto-refresh (free minutes, public repo)
 hooks/                       shared Node runtime: config, instructions, activate,
                              mode-tracker, subagent + per-agent JSON adapters
 .opencode/plugin/baldie.mjs  opencode plugin (injects ruleset + slash commands)

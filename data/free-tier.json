@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "title": "baldie free-tier registry",
+  "description": "Curated, person-maintained registry of free / free-tier / self-hostable services that baldie consults before recommending anything. Refreshed weekly by scripts/refresh-free-tier.js (see data/changelog.md). Fields that end in _verified are only restamped when the service is re-seen upstream; anything left null has not been verified on this mechanism.",
+  "updated": "2026-09-25",
+  "services": [
+    {
+      "name": "Cloudflare Pages",
+      "url": "https://pages.cloudflare.com",
+      "category": "static-hosting",
+      "free_offer": "Unlimited static sites, unlimited bandwidth, 500 builds/mo",
+      "usage_ceiling": "free plan, no credit card",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Cloudflare Workers",
+      "url": "https://workers.cloudflare.com",
+      "category": "serverless",
+      "free_offer": "100,000 requests/day, 10ms CPU, subrequests + KV/D1 free tiers",
+      "usage_ceiling": "requests/day",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "GitHub Actions",
+      "url": "https://github.com/features/actions",
+      "category": "ci-cd",
+      "free_offer": "2,000 min/mo private repos (unlimited public), 500MB storage",
+      "usage_ceiling": "minutes/month",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Vercel",
+      "url": "https://vercel.com",
+      "category": "static-hosting",
+      "free_offer": "Hobby plan: 100GB bandwidth/mo, serverless functions, preview deploys",
+      "usage_ceiling": "bandwidth + function exec/mo",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Supabase",
+      "url": "https://supabase.com",
+      "category": "database",
+      "free_offer": "500MB DB, 1GB storage, 50k MAU auth, paused after 1 wk inactivity",
+      "usage_ceiling": "pauses when idle 7 days",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Neon",
+      "url": "https://neon.tech",
+      "category": "database",
+      "free_offer": "Branching Postgres, 0.5GB storage, 190 compute hrs/mo, autosuspend",
+      "usage_ceiling": "compute hours/month",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Fly.io",
+      "url": "https://fly.io",
+      "category": "paas",
+      "free_offer": "3 shared-cpu-1x 256MB VMs, 3GB persistent volume total",
+      "usage_ceiling": "small VM sizes",
+      "status": "live",
+      "added": "2026-09-25"
+    },
+    {
+      "name": "Cloudflare R2",
+      "url": "https://developers.cloudflare.com/r2",
+      "category": "storage",
+      "free_offer": "10GB storage/mo, 1M class A + 10M class B ops, no egress fee",
+      "usage_ceiling": "storage + operations",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Render",
+      "url": "https://render.com",
+      "category": "paas",
+      "free_offer": "Free web services spin down after 15 min idle; static sites free",
+      "usage_ceiling": "idle spin-down + monthly hours",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Oracle Cloud Always Free",
+      "url": "https://www.oracle.com/cloud/free/",
+      "category": "vm",
+      "free_offer": "2 AMD + 4 Arm (Ampere A1) VMs, up to 24GB RAM, 200GB block storage, forever",
+      "usage_ceiling": "fixed resource caps",
+      "status": "live",
+      "added": "2026-09-25"
+    },
+    {
+      "name": "Google Cloud free tier",
+      "url": "https://cloud.google.com/free",
+      "category": "cloud-credits",
+      "free_offer": "$300 credit 90 days + always-free e2-micro, 1GB Cloud SQL, 5GB storage",
+      "usage_ceiling": "credit expiry + always-free caps",
+      "status": "live",
+      "added": "2026-09-25"
+    },
+    {
+      "name": "AWS free tier",
+      "url": "https://aws.amazon.com/free/",
+      "category": "cloud-credits",
+      "free_offer": "12 months: 750hrs EC2 t2.micro/t3.micro, 5GB S3, 25GB RDS + 100GB egress/mo",
+      "usage_ceiling": "12-month credits + always-free",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Uptime Kuma",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "category": "selfhost",
+      "free_offer": "Open-source self-hosted uptime monitor, FreeBSD/Linux one binary",
+      "usage_ceiling": "your own hardware",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Grafana",
+      "url": "https://grafana.com",
+      "category": "observability",
+      "free_offer": "Grafana Cloud free: 10k series Prometheus, 50GB logs, 15k sessions; or self-host OSS",
+      "usage_ceiling": "series/GB per month",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    },
+    {
+      "name": "Gitea",
+      "url": "https://gitea.com",
+      "category": "selfhost",
+      "free_offer": "Gitea.com free public/private repos; self-host the OSS server anywhere",
+      "usage_ceiling": "storage/repos",
+      "status": "live",
+      "added": "2026-09-25",
+      "last_verified": "2026-09-25"
+    }
+  ]
+}

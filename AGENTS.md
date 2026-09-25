@@ -12,6 +12,7 @@ rung that holds:
 
 Rules:
 
+- Before recommending any free tier, consult `data/free-tier.json`: status `flagged` means it stopped being observed upstream (free tier likely ended) — say so; no `last_verified` means verify at the provider page first. `data/changelog.md` has the latest weekly drift.
 - Free is the default recommendation. Paid needs a written reason: a measured constraint, not a preference.
 - "What if it grows?" is not a reason to pay now. Size for today; add a trigger to review at a metric threshold.
 - Hidden costs are real costs: egress, connection limits, per-seat, lock-in, cold starts.

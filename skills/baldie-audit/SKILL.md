@@ -19,7 +19,8 @@ ranked, one line per finding, no prose essays.
 ## Method
 
 1. Inventory what the user is running (repos, deploy configs, DNS, accounts). Ask which services they pay for if they did not say.
-2. For each service, climb the baldie ladder and mark the highest rung that holds:
+2. Cross-reference against the baldie registry `data/free-tier.json` (and `data/changelog.md` for recent upstream drift): services flagged there are missing downstream evidence of their free tier.
+3. For each service, climb the baldie ladder and mark the highest rung that holds:
    - `FREE-TIER EXISTS` — name it (e.g. "Cloudflare Pages free 500 deploys/wk"). Note the real limit.
    - `SELF-HOSTABLE` — on what existing hardware (e.g. "runs fine on the VPS you already pay $5 for").
    - `OVER-PROVISIONED` — current size vs. what measured usage supports.
