@@ -97,10 +97,11 @@
       "name": "Oracle Cloud Always Free",
       "url": "https://www.oracle.com/cloud/free/",
       "category": "vm",
-      "free_offer": "2 AMD + 4 Arm (Ampere A1) VMs, up to 24GB RAM, 200GB block storage, forever",
+      "free_offer": "2 AMD (E2.1.Micro ×2) + Ampere A1 up to 2 OCPU/12GB total, 200GB block storage, forever",
       "usage_ceiling": "fixed resource caps",
       "status": "live",
-      "added": "2026-09-25"
+      "added": "2026-09-25",
+      "last_verified": "2026-11-09"
     },
     {
       "name": "Google Cloud free tier",
