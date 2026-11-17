@@ -10,12 +10,18 @@ const {
   isDeactivationCommand,
 } = require("../hooks/baldie-config.js");
 const { getBaldieInstructions, getModeLine } = require("../hooks/baldie-instructions.js");
+const { findAlternatives, formatForAgent } = require("../hooks/baldie-find.js");
+const { calculateSavings, formatCostReport } = require("../hooks/baldie-cost.js");
+const { planMigration, formatPlan } = require("../hooks/baldie-migrate.js");
 
 export const readDefaultMode = getDefaultMode;
 export { getBaldieInstructions, getModeLine };
 
 const RUNTIME_MODE_LIST = RUNTIME_MODES.join("|");
 const BALDIE_COMMAND_DESCRIPTION = `Set mode: ${RUNTIME_MODE_LIST}. Commands: status, default <mode>`;
+const BALDIE_FIND_DESCRIPTION = `Search free alternatives: /baldie-find <category|service> [lite|full|ultra]. Categories: database, static-hosting, serverless, ci-cd, storage, paas, vm, observability, dns, email, auth, queue, search, analytics, selfhost.`;
+const BALDIE_COST_DESCRIPTION = `Calculate savings: /baldie-cost <service> <tier> [lite|full|ultra]. Example: /baldie-cost RDS db.t3.micro`;
+const BALDIE_MIGRATE_DESCRIPTION = `Migration plan: /baldie-migrate <from> <to> [tier] [lite|full|ultra]. Example: /baldie-migrate RDS Neon db.t3.micro`;
 
 export function resolveSessionMode(entries, fallbackMode = DEFAULT_MODE) {
   const fallback = normalizePersistedMode(fallbackMode) || DEFAULT_MODE;
@@ -51,6 +57,57 @@ export function parseBaldieCommand(text, defaultMode = DEFAULT_MODE) {
   return { type: "set-mode", mode: fallback === "off" ? "full" : fallback };
 }
 
+export function parseBaldieFindCommand(text, currentMode = DEFAULT_MODE) {
+  const t = String(text || "").trim();
+  if (!t || !t.toLowerCase().startsWith("/baldie-find")) return null;
+
+  const parts = t.split(/\s+/);
+  const query = parts[1] || "";
+  const modeArg = parts[2] || "";
+  const mode = normalizeMode(modeArg) || currentMode;
+
+  if (!query) {
+    return { type: "error", message: "Usage: /baldie-find <category|service> [lite|full|ultra]" };
+  }
+
+  return { type: "find", query, mode };
+}
+
+export function parseBaldieCostCommand(text, currentMode = DEFAULT_MODE) {
+  const t = String(text || "").trim();
+  if (!t || !t.toLowerCase().startsWith("/baldie-cost")) return null;
+
+  const parts = t.split(/\s+/);
+  const service = parts[1] || "";
+  const tier = parts[2] || "";
+  const modeArg = parts[3] || "";
+  const mode = normalizeMode(modeArg) || currentMode;
+
+  if (!service || !tier) {
+    return { type: "error", message: "Usage: /baldie-cost <service> <tier> [lite|full|ultra]" };
+  }
+
+  return { type: "cost", service, tier, mode };
+}
+
+export function parseBaldieMigrateCommand(text, currentMode = DEFAULT_MODE) {
+  const t = String(text || "").trim();
+  if (!t || !t.toLowerCase().startsWith("/baldie-migrate")) return null;
+
+  const parts = t.split(/\s+/);
+  const from = parts[1] || "";
+  const to = parts[2] || "";
+  const tier = parts[3] || "";
+  const modeArg = parts[4] || "";
+  const mode = normalizeMode(modeArg) || currentMode;
+
+  if (!from || !to) {
+    return { type: "error", message: "Usage: /baldie-migrate <from> <to> [tier] [lite|full|ultra]" };
+  }
+
+  return { type: "migrate", from, to, tier: tier || "default", mode };
+}
+
 export const BALDIE_CONFIG = {
   id: "baldie",
   name: "Baldie",
@@ -72,6 +129,18 @@ export const BALDIE_CONFIG = {
             description: BALDIE_COMMAND_DESCRIPTION,
             handler: async (opts) => parseBaldieCommand(opts?.fullText || opts?.text || ""),
           },
+          "/baldie-find": {
+            description: BALDIE_FIND_DESCRIPTION,
+            handler: async (opts) => parseBaldieFindCommand(opts?.fullText || opts?.text || "", readMode()),
+          },
+          "/baldie-cost": {
+            description: BALDIE_COST_DESCRIPTION,
+            handler: async (opts) => parseBaldieCostCommand(opts?.fullText || opts?.text || "", readMode()),
+          },
+          "/baldie-migrate": {
+            description: BALDIE_MIGRATE_DESCRIPTION,
+            handler: async (opts) => parseBaldieMigrateCommand(opts?.fullText || opts?.text || "", readMode()),
+          },
         },
       },
       query: () => ({ instructions: getBaldieInstructions(readMode()) }),
@@ -86,6 +155,36 @@ export const BALDIE_CONFIG = {
             return { message: getModeLine(mode) };
           }
           return { message: getModeLine(parsed.mode) };
+        },
+        async ["/baldie-find"](opts) {
+          const parsed = parseBaldieFindCommand(opts?.fullText || opts?.text || "", readMode());
+          if (!parsed) return null;
+          if (parsed.type === "error") return { message: parsed.message };
+          if (parsed.type === "find") {
+            const result = findAlternatives(parsed.query, { mode: parsed.mode, limit: 10 });
+            return { message: formatForAgent(result) };
+          }
+          return null;
+        },
+        async ["/baldie-cost"](opts) {
+          const parsed = parseBaldieCostCommand(opts?.fullText || opts?.text || "", readMode());
+          if (!parsed) return null;
+          if (parsed.type === "error") return { message: parsed.message };
+          if (parsed.type === "cost") {
+            const report = calculateSavings(parsed.service, parsed.tier, {}, { mode: parsed.mode, limit: 10 });
+            return { message: formatCostReport(report) };
+          }
+          return null;
+        },
+        async ["/baldie-migrate"](opts) {
+          const parsed = parseBaldieMigrateCommand(opts?.fullText || opts?.text || "", readMode());
+          if (!parsed) return null;
+          if (parsed.type === "error") return { message: parsed.message };
+          if (parsed.type === "migrate") {
+            const plan = planMigration(parsed.from, parsed.tier, parsed.to, {}, { mode: parsed.mode });
+            return { message: formatPlan(plan) };
+          }
+          return null;
         },
       },
     };

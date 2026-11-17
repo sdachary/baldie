@@ -195,7 +195,95 @@ async function main() {
   }
   registry.updated = changes.date;
 
-  // 3. New upstream entries (never before observed).
+  // 3. Auto-promotion: promote high-confidence upstream entries to curated registry
+  changes.promoted = [];
+  const KNOWN_CATEGORIES = new Set([
+    'database', 'static-hosting', 'serverless', 'ci-cd', 'storage', 'paas', 'vm',
+    'observability', 'dns', 'email', 'auth', 'queue', 'search', 'analytics', 'selfhost',
+    'cdn', 'monitoring', 'logging', 'analytics', 'ai-ml', 'security', 'secrets',
+    'feature-flags', 'api-gateway', 'message-broker', 'cache', 'blob-storage',
+    'vector-db', 'time-series', 'graph-db', 'search-engine', 'data-warehouse',
+    'etl', 'streaming', 'workflow', 'orchestration', 'service-mesh', 'api-management',
+  ]);
+  const SELFHOST_HINTS = ['self-host', 'selfhost', 'open source', 'oss', 'on-prem', 'docker', 'kubernetes', 'helm'];
+  const ALWAYS_FREE_HINTS = ['forever', 'always free', 'no credit card', 'no card required', 'generous free tier'];
+
+  const existingHosts = new Set(registry.services.map(s => {
+    try { return new URL(s.url).hostname.replace(/^www\./, ''); } catch (e) { return ''; }
+  }).filter(Boolean));
+
+  for (const [k, entry] of currentKeys) {
+    if (existingHosts.has(new URL(entry.url).hostname.replace(/www\./, ''))) continue;
+    if (registry.services.some(s => s.name.toLowerCase() === entry.name.toLowerCase())) continue;
+
+    const rec = seen.entries[k];
+    if (!rec || rec.missing_streak > 0) continue;
+    const weeksObserved = rec.last_seen && rec.first_seen
+      ? Math.floor((new Date(rec.last_seen) - new Date(rec.first_seen)) / (7 * 86400000))
+      : 0;
+    if (weeksObserved < 4) continue;
+
+    const host = new URL(entry.url).hostname.replace(/^www\./, '');
+    const hostEntries = Array.from(currentKeys.values()).filter(e => {
+      try { return new URL(e.url).hostname.replace(/^www\./, '') === host; } catch { return false; }
+    });
+    if (hostEntries.length < 2) continue;
+
+    const cat = entry.category.toLowerCase();
+    if (!KNOWN_CATEGORIES.has(cat) && cat !== 'selfhost') continue;
+
+    const desc = entry.desc.toLowerCase();
+    const isSelfHost = SELFHOST_HINTS.some(h => desc.includes(h)) || cat === 'selfhost';
+    const isAlwaysFree = ALWAYS_FREE_HINTS.some(h => desc.includes(h));
+
+    let category = cat;
+    if (cat === 'database' || cat.includes('sql') || cat.includes('db')) category = 'database';
+    else if (cat.includes('host') || cat.includes('static') || cat.includes('cdn')) category = 'static-hosting';
+    else if (cat.includes('serverless') || cat.includes('function') || cat.includes('faas')) category = 'serverless';
+    else if (cat.includes('ci') || cat.includes('deploy') || cat.includes('pipeline')) category = 'ci-cd';
+    else if (cat.includes('storage') || cat.includes('blob') || cat.includes('object') || cat.includes('s3')) category = 'storage';
+    else if (cat.includes('paas') || cat.includes('platform') || cat.includes('app host')) category = 'paas';
+    else if (cat.includes('vm') || cat.includes('vps') || cat.includes('compute') || cat.includes('instance')) category = 'vm';
+    else if (cat.includes('monitor') || cat.includes('observ') || cat.includes('metric') || cat.includes('log') || cat.includes('apm')) category = 'observability';
+    else if (cat.includes('dns') || cat.includes('domain')) category = 'dns';
+    else if (cat.includes('email') || cat.includes('mail') || cat.includes('smtp')) category = 'email';
+    else if (cat.includes('auth') || cat.includes('identity') || cat.includes('user')) category = 'auth';
+    else if (cat.includes('queue') || cat.includes('message') || cat.includes('pubsub') || cat.includes('stream') || cat.includes('kafka')) category = 'queue';
+    else if (cat.includes('search') || cat.includes('elastic') || cat.includes('algolia')) category = 'search';
+    else if (cat.includes('analytic') || cat.includes('bi') || cat.includes('metric')) category = 'analytics';
+    else if (isSelfHost) category = 'selfhost';
+
+    const freeOffer = isSelfHost
+      ? `Open-source self-hosted ${entry.name}, run on your own hardware`
+      : isAlwaysFree
+        ? `${entry.name} — generous always-free tier (no credit card)`
+        : `${entry.name} — free tier available (verify limits at provider)`;
+
+    const usageCeiling = isSelfHost
+      ? 'your own hardware'
+      : isAlwaysFree
+        ? 'forever (always-free)'
+        : 'check provider pricing page';
+
+    const promoted = {
+      name: entry.name,
+      url: entry.url,
+      category,
+      free_offer: freeOffer,
+      usage_ceiling: usageCeiling,
+      status: 'live',
+      added: changes.date,
+      last_verified: changes.date,
+      auto_promoted: true,
+      promotion_source: entry.source,
+      promotion_weeks_observed: weeksObserved,
+    };
+
+    registry.services.push(promoted);
+    changes.promoted.push(promoted.name);
+  }
+
+  // 4. New upstream entries (never before observed).
   const bootstrap = Object.keys(seen.entries).filter((k) => seen.entries[k].first_seen !== changes.date).length === 0;
   for (const [k, entry] of currentKeys) {
     if (seen.entries[k] && seen.entries[k].first_seen === changes.date) {
@@ -229,7 +317,14 @@ async function main() {
     }
   }
   lines.push('');
-  lines.push(`Registry: ${changes.verified.length} verified live, ${changes.flagged.length} flagged for review (${changes.flagged.slice(0, 15).join(', ') || 'none'}).`);
+  if (changes.promoted.length) {
+    lines.push(`**Auto-promoted to registry (${changes.promoted.length}):**`);
+    for (const p of changes.promoted.slice(0, 20)) {
+      lines.push(`- ${p} (observed 4+ weeks, multiple upstream refs)`);
+    }
+    lines.push('');
+  }
+  lines.push(`Registry: ${changes.verified.length} verified live, ${changes.flagged.length} flagged for review (${changes.flagged.slice(0, 15).join(', ') || 'none'}), ${changes.promoted.length} auto-promoted.`);
   lines.push('');
   const prev = fs.existsSync(CHANGELOG_PATH) ? fs.readFileSync(CHANGELOG_PATH, 'utf8') : '';
   fs.writeFileSync(CHANGELOG_PATH, lines.join('\n') + '\n' + prev);
@@ -237,7 +332,7 @@ async function main() {
   fs.writeFileSync(SEEN_PATH, JSON.stringify(seen, null, 2) + '\n');
   fs.writeFileSync(REGISTRY_PATH, JSON.stringify(registry, null, 2) + '\n');
 
-  console.log(`[baldie] refreshed. parsed: ${currentKeys.size} | new ${changes.new.length} | gone ${changes.gone.length} | verified ${changes.verified.length} | flagged ${changes.flagged.length}`);
+  console.log(`[baldie] refreshed. parsed: ${currentKeys.size} | new ${changes.new.length} | gone ${changes.gone.length} | verified ${changes.verified.length} | flagged ${changes.flagged.length} | promoted ${changes.promoted.length}`);
   if (out.errors.length) { console.error(`[baldie] ${out.errors.length} fetch error(s)`); process.exitCode = 1; }
 }
 

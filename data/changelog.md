@@ -1,3 +1,367 @@
+## 2026-11-17
+
+Observed: 2517 entries across free-for-dev, awesome-selfhosted.
+  free-for-dev: 1357 parsed.
+  awesome-selfhosted: 1202 parsed.
+
+**New upstream entries (155):**
+- [Aastro](https://voidrunner3074.github.io/aastro-docs) — Extensible API Gateway written in Go. ([Source Code](https://github.com/voidrunner3074/aas
+- [addy.io](https://addy.io) — Open-source anonymous email forwarding, create unlimited email aliases for free
+- [AgileHero](https://agilehero.io/) — All-in-one project management tool. Free plan includes kanban board, backlog, epics, estim
+- [Alias Email](https://alias.email) — Free 10 Bump email addresses, one custom domain
+- [AliasMail](https://aliasmail.space/) — Privacy-preserving email forwarding and alias service with HMAC-SHA256 signed webhooks and
+- [App AI Gateway](https://appaigateway.com/) — Gateway/proxy for calling AI providers from iOS applications without shipping provider key
+- [Archboard](https://getarchboard.app/) — Architecture diagrams your team and AI agents edit live. Free plan: 1 seat, 3 diagrams, al
+- [Backforms](https://backforms.com) — Multi-channel headless form backend offering 300 submissions per month, spam protection, a
+- [Beliq](https://beliq.eu) — European REST API platform for e-invoicing, including generating, validating and deliverin
+- [BillDog.io](https://billdog.io/) — In-app subscription paywalls, A/B testing, product analytics, and messaging with SDKs for 
+- [bloglite](https://github.com/rikhuijzer/bloglite) — Micro-blog tool offering built-in syntax highlighting, mobile publishing and more (alterna
+- [BootForm](https://bootform.com/) — Form backend for builders. Free plan: 250 submissions a month with unlimited forms. Email 
+- [Bottle Rocket](https://bottle-rocket.app/) — Document scanning and management application, compatible with Rocketbook and Scribzee form
+- [BylineCV](https://bylinecv.com/) — Form-based CV and cover letter builder to pass ATS filters and organize all your versions 
+- [Cabin](https://withcabin.com) — Privacy-first, cookie-free web analytics with per-page carbon estimates and an MCP server 
+- [Canjean](https://canjean.com/exchange-rate-api) — Free exchange rate API for 150+ currencies in JSON, CSV and plain text, no API key or sign
+- [Canva](https://www.canva.com/mockups/) — Create product mockups, 200 free mockups.
+- [CellarBoss](https://cellarboss.org) — Wine inventory management system. ([Source Code](https://github.com/CellarBoss/cellarboss)
+- [CertAvert](https://certavert.com/monitoring) — Monitor SSL/TLS certificates on any port, checks expiry, chain problems, revocation, host 
+- [CheezyPizza](https://www.cheezypizza.in) — Send files directly between browsers using WebRTC. No uploads, no cloud storage, and no mi
+- [Chobble Tickets](https://tickets.chobble.com) — Event ticketing with QR check-in and encrypted attendee records. The complete product is A
+- [Cisco Networking Academy](https://netacad.com/) — Offers free certification-aligned courses in topics like cybersecurity, networking, and Py
+- [cocalc.ai](https://cocalc.ai/) — Collaborative calculation in the cloud. Browser access to full Ubuntu with built-in collab
+- [cors.dev](https://cors.dev/) — CORS proxy for calling third-party APIs from frontend code: prefix any HTTPS URL with `htt
+- [CustomJS](https://www.customjs.space) — HTML to PDF or PDF to PNG/Text & PDF merging/extraction/merging APIs. Free tier has 600 ca
+- [CyberShield Studio](https://cybershieldstudio.com/) — Security monitoring for e-commerce store operators and developers. Weekly scans for JavaSc
+- [DashBeam](https://dashbeam.net) — File transfer tool with peer-to-peer networking, letting you transfer any file with any si
+- [datannur](https://datannur.com) — Lightweight data catalog for documenting and exploring structured data files and databases
+- [Datasense](https://usedatasense.com/) — Web analytics with JavaScript error tracking, goals, and revenue attribution. Free plan: 1
+- [Dexio](https://dexio.wiki) — Shared wiki that all your AI agents read and write, so each one starts with the same conte
+- [disban.io](https://disban.io/) — Protect user signups from disposable emails, or just validate an email against disposable 
+- [DMARCmetric](https://dmarcmetric.com/) — DMARC report monitoring with named sending sources, SPF/DKIM alignment and plain-English s
+- [DNSvivo](https://dnsvivo.com/) — Free managed DNS with automatic failover, weighted load balancing, and Dynamic DNS (DDNS).
+- [DocSpring](https://docspring.com) — Fill out PDF forms, generate PDFs and Word documents, and collect e-signatures. Free devel
+- [DomainCanary](https://domaincanary.com) — DMARC enforcement service that protects your domain from email spoofing. First domain is f
+- [drawDB](https://www.drawdb.app) — Browser-based visual and DBML database diagram editor and SQL generator for MySQL, Postgre
+- [Dynamic Document API](https://dynamicdocumentapi.com/) — Turn data into pixel-perfect PDFs and images. The free plan includes 50 renders per month 
+- [Eclipse Che](https://www.eclipse.dev/che/) — Web-based and Kubernetes-Native IDE for Developer Teams with multi-language support. Open 
+- [eForward](https://eforward.com) — Email forwarding for custom domains. Free plan includes 1 domain, 1 mailbox, 10 aliases (c
+- [Enchant](https://www.enchant.com) — Omnichannel customer communication platform. Free tier includes chat widgets, email newsle
+
+**Possibly gone (missing on this run, 0):**
+- none
+
+Registry: 16 verified live, 0 flagged for review (none), 0 auto-promoted.
+
+## 2026-11-17
+
+Observed: 2517 entries across free-for-dev, awesome-selfhosted.
+  free-for-dev: 1357 parsed.
+  awesome-selfhosted: 1202 parsed.
+
+**New upstream entries (155):**
+- [Aastro](https://voidrunner3074.github.io/aastro-docs) — Extensible API Gateway written in Go. ([Source Code](https://github.com/voidrunner3074/aas
+- [addy.io](https://addy.io) — Open-source anonymous email forwarding, create unlimited email aliases for free
+- [AgileHero](https://agilehero.io/) — All-in-one project management tool. Free plan includes kanban board, backlog, epics, estim
+- [Alias Email](https://alias.email) — Free 10 Bump email addresses, one custom domain
+- [AliasMail](https://aliasmail.space/) — Privacy-preserving email forwarding and alias service with HMAC-SHA256 signed webhooks and
+- [App AI Gateway](https://appaigateway.com/) — Gateway/proxy for calling AI providers from iOS applications without shipping provider key
+- [Archboard](https://getarchboard.app/) — Architecture diagrams your team and AI agents edit live. Free plan: 1 seat, 3 diagrams, al
+- [Backforms](https://backforms.com) — Multi-channel headless form backend offering 300 submissions per month, spam protection, a
+- [Beliq](https://beliq.eu) — European REST API platform for e-invoicing, including generating, validating and deliverin
+- [BillDog.io](https://billdog.io/) — In-app subscription paywalls, A/B testing, product analytics, and messaging with SDKs for 
+- [bloglite](https://github.com/rikhuijzer/bloglite) — Micro-blog tool offering built-in syntax highlighting, mobile publishing and more (alterna
+- [BootForm](https://bootform.com/) — Form backend for builders. Free plan: 250 submissions a month with unlimited forms. Email 
+- [Bottle Rocket](https://bottle-rocket.app/) — Document scanning and management application, compatible with Rocketbook and Scribzee form
+- [BylineCV](https://bylinecv.com/) — Form-based CV and cover letter builder to pass ATS filters and organize all your versions 
+- [Cabin](https://withcabin.com) — Privacy-first, cookie-free web analytics with per-page carbon estimates and an MCP server 
+- [Canjean](https://canjean.com/exchange-rate-api) — Free exchange rate API for 150+ currencies in JSON, CSV and plain text, no API key or sign
+- [Canva](https://www.canva.com/mockups/) — Create product mockups, 200 free mockups.
+- [CellarBoss](https://cellarboss.org) — Wine inventory management system. ([Source Code](https://github.com/CellarBoss/cellarboss)
+- [CertAvert](https://certavert.com/monitoring) — Monitor SSL/TLS certificates on any port, checks expiry, chain problems, revocation, host 
+- [CheezyPizza](https://www.cheezypizza.in) — Send files directly between browsers using WebRTC. No uploads, no cloud storage, and no mi
+- [Chobble Tickets](https://tickets.chobble.com) — Event ticketing with QR check-in and encrypted attendee records. The complete product is A
+- [Cisco Networking Academy](https://netacad.com/) — Offers free certification-aligned courses in topics like cybersecurity, networking, and Py
+- [cocalc.ai](https://cocalc.ai/) — Collaborative calculation in the cloud. Browser access to full Ubuntu with built-in collab
+- [cors.dev](https://cors.dev/) — CORS proxy for calling third-party APIs from frontend code: prefix any HTTPS URL with `htt
+- [CustomJS](https://www.customjs.space) — HTML to PDF or PDF to PNG/Text & PDF merging/extraction/merging APIs. Free tier has 600 ca
+- [CyberShield Studio](https://cybershieldstudio.com/) — Security monitoring for e-commerce store operators and developers. Weekly scans for JavaSc
+- [DashBeam](https://dashbeam.net) — File transfer tool with peer-to-peer networking, letting you transfer any file with any si
+- [datannur](https://datannur.com) — Lightweight data catalog for documenting and exploring structured data files and databases
+- [Datasense](https://usedatasense.com/) — Web analytics with JavaScript error tracking, goals, and revenue attribution. Free plan: 1
+- [Dexio](https://dexio.wiki) — Shared wiki that all your AI agents read and write, so each one starts with the same conte
+- [disban.io](https://disban.io/) — Protect user signups from disposable emails, or just validate an email against disposable 
+- [DMARCmetric](https://dmarcmetric.com/) — DMARC report monitoring with named sending sources, SPF/DKIM alignment and plain-English s
+- [DNSvivo](https://dnsvivo.com/) — Free managed DNS with automatic failover, weighted load balancing, and Dynamic DNS (DDNS).
+- [DocSpring](https://docspring.com) — Fill out PDF forms, generate PDFs and Word documents, and collect e-signatures. Free devel
+- [DomainCanary](https://domaincanary.com) — DMARC enforcement service that protects your domain from email spoofing. First domain is f
+- [drawDB](https://www.drawdb.app) — Browser-based visual and DBML database diagram editor and SQL generator for MySQL, Postgre
+- [Dynamic Document API](https://dynamicdocumentapi.com/) — Turn data into pixel-perfect PDFs and images. The free plan includes 50 renders per month 
+- [Eclipse Che](https://www.eclipse.dev/che/) — Web-based and Kubernetes-Native IDE for Developer Teams with multi-language support. Open 
+- [eForward](https://eforward.com) — Email forwarding for custom domains. Free plan includes 1 domain, 1 mailbox, 10 aliases (c
+- [Enchant](https://www.enchant.com) — Omnichannel customer communication platform. Free tier includes chat widgets, email newsle
+
+**Possibly gone (missing on this run, 0):**
+- none
+
+**Auto-promoted to registry (5):**
+- SweetUptime (observed 4+ weeks, multiple upstream refs)
+- anon.li Alias (observed 4+ weeks, multiple upstream refs)
+- Proton Mail (observed 4+ weeks, multiple upstream refs)
+- Choreo (observed 4+ weeks, multiple upstream refs)
+- namecheap.com (observed 4+ weeks, multiple upstream refs)
+
+Registry: 11 verified live, 0 flagged for review (none), 5 auto-promoted.
+
+## 2026-11-17
+
+Observed: 2517 entries across free-for-dev, awesome-selfhosted.
+  free-for-dev: 1357 parsed.
+  awesome-selfhosted: 1202 parsed.
+
+**New upstream entries (155):**
+- [Aastro](https://voidrunner3074.github.io/aastro-docs) — Extensible API Gateway written in Go. ([Source Code](https://github.com/voidrunner3074/aas
+- [addy.io](https://addy.io) — Open-source anonymous email forwarding, create unlimited email aliases for free
+- [AgileHero](https://agilehero.io/) — All-in-one project management tool. Free plan includes kanban board, backlog, epics, estim
+- [Alias Email](https://alias.email) — Free 10 Bump email addresses, one custom domain
+- [AliasMail](https://aliasmail.space/) — Privacy-preserving email forwarding and alias service with HMAC-SHA256 signed webhooks and
+- [App AI Gateway](https://appaigateway.com/) — Gateway/proxy for calling AI providers from iOS applications without shipping provider key
+- [Archboard](https://getarchboard.app/) — Architecture diagrams your team and AI agents edit live. Free plan: 1 seat, 3 diagrams, al
+- [Backforms](https://backforms.com) — Multi-channel headless form backend offering 300 submissions per month, spam protection, a
+- [Beliq](https://beliq.eu) — European REST API platform for e-invoicing, including generating, validating and deliverin
+- [BillDog.io](https://billdog.io/) — In-app subscription paywalls, A/B testing, product analytics, and messaging with SDKs for 
+- [bloglite](https://github.com/rikhuijzer/bloglite) — Micro-blog tool offering built-in syntax highlighting, mobile publishing and more (alterna
+- [BootForm](https://bootform.com/) — Form backend for builders. Free plan: 250 submissions a month with unlimited forms. Email 
+- [Bottle Rocket](https://bottle-rocket.app/) — Document scanning and management application, compatible with Rocketbook and Scribzee form
+- [BylineCV](https://bylinecv.com/) — Form-based CV and cover letter builder to pass ATS filters and organize all your versions 
+- [Cabin](https://withcabin.com) — Privacy-first, cookie-free web analytics with per-page carbon estimates and an MCP server 
+- [Canjean](https://canjean.com/exchange-rate-api) — Free exchange rate API for 150+ currencies in JSON, CSV and plain text, no API key or sign
+- [Canva](https://www.canva.com/mockups/) — Create product mockups, 200 free mockups.
+- [CellarBoss](https://cellarboss.org) — Wine inventory management system. ([Source Code](https://github.com/CellarBoss/cellarboss)
+- [CertAvert](https://certavert.com/monitoring) — Monitor SSL/TLS certificates on any port, checks expiry, chain problems, revocation, host 
+- [CheezyPizza](https://www.cheezypizza.in) — Send files directly between browsers using WebRTC. No uploads, no cloud storage, and no mi
+- [Chobble Tickets](https://tickets.chobble.com) — Event ticketing with QR check-in and encrypted attendee records. The complete product is A
+- [Cisco Networking Academy](https://netacad.com/) — Offers free certification-aligned courses in topics like cybersecurity, networking, and Py
+- [cocalc.ai](https://cocalc.ai/) — Collaborative calculation in the cloud. Browser access to full Ubuntu with built-in collab
+- [cors.dev](https://cors.dev/) — CORS proxy for calling third-party APIs from frontend code: prefix any HTTPS URL with `htt
+- [CustomJS](https://www.customjs.space) — HTML to PDF or PDF to PNG/Text & PDF merging/extraction/merging APIs. Free tier has 600 ca
+- [CyberShield Studio](https://cybershieldstudio.com/) — Security monitoring for e-commerce store operators and developers. Weekly scans for JavaSc
+- [DashBeam](https://dashbeam.net) — File transfer tool with peer-to-peer networking, letting you transfer any file with any si
+- [datannur](https://datannur.com) — Lightweight data catalog for documenting and exploring structured data files and databases
+- [Datasense](https://usedatasense.com/) — Web analytics with JavaScript error tracking, goals, and revenue attribution. Free plan: 1
+- [Dexio](https://dexio.wiki) — Shared wiki that all your AI agents read and write, so each one starts with the same conte
+- [disban.io](https://disban.io/) — Protect user signups from disposable emails, or just validate an email against disposable 
+- [DMARCmetric](https://dmarcmetric.com/) — DMARC report monitoring with named sending sources, SPF/DKIM alignment and plain-English s
+- [DNSvivo](https://dnsvivo.com/) — Free managed DNS with automatic failover, weighted load balancing, and Dynamic DNS (DDNS).
+- [DocSpring](https://docspring.com) — Fill out PDF forms, generate PDFs and Word documents, and collect e-signatures. Free devel
+- [DomainCanary](https://domaincanary.com) — DMARC enforcement service that protects your domain from email spoofing. First domain is f
+- [drawDB](https://www.drawdb.app) — Browser-based visual and DBML database diagram editor and SQL generator for MySQL, Postgre
+- [Dynamic Document API](https://dynamicdocumentapi.com/) — Turn data into pixel-perfect PDFs and images. The free plan includes 50 renders per month 
+- [Eclipse Che](https://www.eclipse.dev/che/) — Web-based and Kubernetes-Native IDE for Developer Teams with multi-language support. Open 
+- [eForward](https://eforward.com) — Email forwarding for custom domains. Free plan includes 1 domain, 1 mailbox, 10 aliases (c
+- [Enchant](https://www.enchant.com) — Omnichannel customer communication platform. Free tier includes chat widgets, email newsle
+
+**Possibly gone (missing on this run, 0):**
+- none
+
+Registry: 11 verified live, 0 flagged for review (none).
+
+## 2026-11-17
+
+Observed: 2517 entries across free-for-dev, awesome-selfhosted.
+  free-for-dev: 1357 parsed.
+  awesome-selfhosted: 1202 parsed.
+
+**New upstream entries (155):**
+- [Aastro](https://voidrunner3074.github.io/aastro-docs) — Extensible API Gateway written in Go. ([Source Code](https://github.com/voidrunner3074/aas
+- [addy.io](https://addy.io) — Open-source anonymous email forwarding, create unlimited email aliases for free
+- [AgileHero](https://agilehero.io/) — All-in-one project management tool. Free plan includes kanban board, backlog, epics, estim
+- [Alias Email](https://alias.email) — Free 10 Bump email addresses, one custom domain
+- [AliasMail](https://aliasmail.space/) — Privacy-preserving email forwarding and alias service with HMAC-SHA256 signed webhooks and
+- [App AI Gateway](https://appaigateway.com/) — Gateway/proxy for calling AI providers from iOS applications without shipping provider key
+- [Archboard](https://getarchboard.app/) — Architecture diagrams your team and AI agents edit live. Free plan: 1 seat, 3 diagrams, al
+- [Backforms](https://backforms.com) — Multi-channel headless form backend offering 300 submissions per month, spam protection, a
+- [Beliq](https://beliq.eu) — European REST API platform for e-invoicing, including generating, validating and deliverin
+- [BillDog.io](https://billdog.io/) — In-app subscription paywalls, A/B testing, product analytics, and messaging with SDKs for 
+- [bloglite](https://github.com/rikhuijzer/bloglite) — Micro-blog tool offering built-in syntax highlighting, mobile publishing and more (alterna
+- [BootForm](https://bootform.com/) — Form backend for builders. Free plan: 250 submissions a month with unlimited forms. Email 
+- [Bottle Rocket](https://bottle-rocket.app/) — Document scanning and management application, compatible with Rocketbook and Scribzee form
+- [BylineCV](https://bylinecv.com/) — Form-based CV and cover letter builder to pass ATS filters and organize all your versions 
+- [Cabin](https://withcabin.com) — Privacy-first, cookie-free web analytics with per-page carbon estimates and an MCP server 
+- [Canjean](https://canjean.com/exchange-rate-api) — Free exchange rate API for 150+ currencies in JSON, CSV and plain text, no API key or sign
+- [Canva](https://www.canva.com/mockups/) — Create product mockups, 200 free mockups.
+- [CellarBoss](https://cellarboss.org) — Wine inventory management system. ([Source Code](https://github.com/CellarBoss/cellarboss)
+- [CertAvert](https://certavert.com/monitoring) — Monitor SSL/TLS certificates on any port, checks expiry, chain problems, revocation, host 
+- [CheezyPizza](https://www.cheezypizza.in) — Send files directly between browsers using WebRTC. No uploads, no cloud storage, and no mi
+- [Chobble Tickets](https://tickets.chobble.com) — Event ticketing with QR check-in and encrypted attendee records. The complete product is A
+- [Cisco Networking Academy](https://netacad.com/) — Offers free certification-aligned courses in topics like cybersecurity, networking, and Py
+- [cocalc.ai](https://cocalc.ai/) — Collaborative calculation in the cloud. Browser access to full Ubuntu with built-in collab
+- [cors.dev](https://cors.dev/) — CORS proxy for calling third-party APIs from frontend code: prefix any HTTPS URL with `htt
+- [CustomJS](https://www.customjs.space) — HTML to PDF or PDF to PNG/Text & PDF merging/extraction/merging APIs. Free tier has 600 ca
+- [CyberShield Studio](https://cybershieldstudio.com/) — Security monitoring for e-commerce store operators and developers. Weekly scans for JavaSc
+- [DashBeam](https://dashbeam.net) — File transfer tool with peer-to-peer networking, letting you transfer any file with any si
+- [datannur](https://datannur.com) — Lightweight data catalog for documenting and exploring structured data files and databases
+- [Datasense](https://usedatasense.com/) — Web analytics with JavaScript error tracking, goals, and revenue attribution. Free plan: 1
+- [Dexio](https://dexio.wiki) — Shared wiki that all your AI agents read and write, so each one starts with the same conte
+- [disban.io](https://disban.io/) — Protect user signups from disposable emails, or just validate an email against disposable 
+- [DMARCmetric](https://dmarcmetric.com/) — DMARC report monitoring with named sending sources, SPF/DKIM alignment and plain-English s
+- [DNSvivo](https://dnsvivo.com/) — Free managed DNS with automatic failover, weighted load balancing, and Dynamic DNS (DDNS).
+- [DocSpring](https://docspring.com) — Fill out PDF forms, generate PDFs and Word documents, and collect e-signatures. Free devel
+- [DomainCanary](https://domaincanary.com) — DMARC enforcement service that protects your domain from email spoofing. First domain is f
+- [drawDB](https://www.drawdb.app) — Browser-based visual and DBML database diagram editor and SQL generator for MySQL, Postgre
+- [Dynamic Document API](https://dynamicdocumentapi.com/) — Turn data into pixel-perfect PDFs and images. The free plan includes 50 renders per month 
+- [Eclipse Che](https://www.eclipse.dev/che/) — Web-based and Kubernetes-Native IDE for Developer Teams with multi-language support. Open 
+- [eForward](https://eforward.com) — Email forwarding for custom domains. Free plan includes 1 domain, 1 mailbox, 10 aliases (c
+- [Enchant](https://www.enchant.com) — Omnichannel customer communication platform. Free tier includes chat widgets, email newsle
+
+**Possibly gone (missing on this run, 0):**
+- none
+
+Registry: 11 verified live, 0 flagged for review (none).
+
+## 2026-11-17
+
+Observed: 2517 entries across free-for-dev, awesome-selfhosted.
+  free-for-dev: 1357 parsed.
+  awesome-selfhosted: 1202 parsed.
+
+**New upstream entries (155):**
+- [Aastro](https://voidrunner3074.github.io/aastro-docs) — Extensible API Gateway written in Go. ([Source Code](https://github.com/voidrunner3074/aas
+- [addy.io](https://addy.io) — Open-source anonymous email forwarding, create unlimited email aliases for free
+- [AgileHero](https://agilehero.io/) — All-in-one project management tool. Free plan includes kanban board, backlog, epics, estim
+- [Alias Email](https://alias.email) — Free 10 Bump email addresses, one custom domain
+- [AliasMail](https://aliasmail.space/) — Privacy-preserving email forwarding and alias service with HMAC-SHA256 signed webhooks and
+- [App AI Gateway](https://appaigateway.com/) — Gateway/proxy for calling AI providers from iOS applications without shipping provider key
+- [Archboard](https://getarchboard.app/) — Architecture diagrams your team and AI agents edit live. Free plan: 1 seat, 3 diagrams, al
+- [Backforms](https://backforms.com) — Multi-channel headless form backend offering 300 submissions per month, spam protection, a
+- [Beliq](https://beliq.eu) — European REST API platform for e-invoicing, including generating, validating and deliverin
+- [BillDog.io](https://billdog.io/) — In-app subscription paywalls, A/B testing, product analytics, and messaging with SDKs for 
+- [bloglite](https://github.com/rikhuijzer/bloglite) — Micro-blog tool offering built-in syntax highlighting, mobile publishing and more (alterna
+- [BootForm](https://bootform.com/) — Form backend for builders. Free plan: 250 submissions a month with unlimited forms. Email 
+- [Bottle Rocket](https://bottle-rocket.app/) — Document scanning and management application, compatible with Rocketbook and Scribzee form
+- [BylineCV](https://bylinecv.com/) — Form-based CV and cover letter builder to pass ATS filters and organize all your versions 
+- [Cabin](https://withcabin.com) — Privacy-first, cookie-free web analytics with per-page carbon estimates and an MCP server 
+- [Canjean](https://canjean.com/exchange-rate-api) — Free exchange rate API for 150+ currencies in JSON, CSV and plain text, no API key or sign
+- [Canva](https://www.canva.com/mockups/) — Create product mockups, 200 free mockups.
+- [CellarBoss](https://cellarboss.org) — Wine inventory management system. ([Source Code](https://github.com/CellarBoss/cellarboss)
+- [CertAvert](https://certavert.com/monitoring) — Monitor SSL/TLS certificates on any port, checks expiry, chain problems, revocation, host 
+- [CheezyPizza](https://www.cheezypizza.in) — Send files directly between browsers using WebRTC. No uploads, no cloud storage, and no mi
+- [Chobble Tickets](https://tickets.chobble.com) — Event ticketing with QR check-in and encrypted attendee records. The complete product is A
+- [Cisco Networking Academy](https://netacad.com/) — Offers free certification-aligned courses in topics like cybersecurity, networking, and Py
+- [cocalc.ai](https://cocalc.ai/) — Collaborative calculation in the cloud. Browser access to full Ubuntu with built-in collab
+- [cors.dev](https://cors.dev/) — CORS proxy for calling third-party APIs from frontend code: prefix any HTTPS URL with `htt
+- [CustomJS](https://www.customjs.space) — HTML to PDF or PDF to PNG/Text & PDF merging/extraction/merging APIs. Free tier has 600 ca
+- [CyberShield Studio](https://cybershieldstudio.com/) — Security monitoring for e-commerce store operators and developers. Weekly scans for JavaSc
+- [DashBeam](https://dashbeam.net) — File transfer tool with peer-to-peer networking, letting you transfer any file with any si
+- [datannur](https://datannur.com) — Lightweight data catalog for documenting and exploring structured data files and databases
+- [Datasense](https://usedatasense.com/) — Web analytics with JavaScript error tracking, goals, and revenue attribution. Free plan: 1
+- [Dexio](https://dexio.wiki) — Shared wiki that all your AI agents read and write, so each one starts with the same conte
+- [disban.io](https://disban.io/) — Protect user signups from disposable emails, or just validate an email against disposable 
+- [DMARCmetric](https://dmarcmetric.com/) — DMARC report monitoring with named sending sources, SPF/DKIM alignment and plain-English s
+- [DNSvivo](https://dnsvivo.com/) — Free managed DNS with automatic failover, weighted load balancing, and Dynamic DNS (DDNS).
+- [DocSpring](https://docspring.com) — Fill out PDF forms, generate PDFs and Word documents, and collect e-signatures. Free devel
+- [DomainCanary](https://domaincanary.com) — DMARC enforcement service that protects your domain from email spoofing. First domain is f
+- [drawDB](https://www.drawdb.app) — Browser-based visual and DBML database diagram editor and SQL generator for MySQL, Postgre
+- [Dynamic Document API](https://dynamicdocumentapi.com/) — Turn data into pixel-perfect PDFs and images. The free plan includes 50 renders per month 
+- [Eclipse Che](https://www.eclipse.dev/che/) — Web-based and Kubernetes-Native IDE for Developer Teams with multi-language support. Open 
+- [eForward](https://eforward.com) — Email forwarding for custom domains. Free plan includes 1 domain, 1 mailbox, 10 aliases (c
+- [Enchant](https://www.enchant.com) — Omnichannel customer communication platform. Free tier includes chat widgets, email newsle
+
+**Possibly gone (missing on this run, 0):**
+- none
+
+Registry: 11 verified live, 2 flagged for review (Neon, Oracle Cloud Always Free).
+
+## 2026-11-17
+
+Observed: 2517 entries across free-for-dev, awesome-selfhosted.
+  free-for-dev: 1357 parsed.
+  awesome-selfhosted: 1202 parsed.
+
+**New upstream entries (155):**
+- [Aastro](https://voidrunner3074.github.io/aastro-docs) — Extensible API Gateway written in Go. ([Source Code](https://github.com/voidrunner3074/aas
+- [addy.io](https://addy.io) — Open-source anonymous email forwarding, create unlimited email aliases for free
+- [AgileHero](https://agilehero.io/) — All-in-one project management tool. Free plan includes kanban board, backlog, epics, estim
+- [Alias Email](https://alias.email) — Free 10 Bump email addresses, one custom domain
+- [AliasMail](https://aliasmail.space/) — Privacy-preserving email forwarding and alias service with HMAC-SHA256 signed webhooks and
+- [App AI Gateway](https://appaigateway.com/) — Gateway/proxy for calling AI providers from iOS applications without shipping provider key
+- [Archboard](https://getarchboard.app/) — Architecture diagrams your team and AI agents edit live. Free plan: 1 seat, 3 diagrams, al
+- [Backforms](https://backforms.com) — Multi-channel headless form backend offering 300 submissions per month, spam protection, a
+- [Beliq](https://beliq.eu) — European REST API platform for e-invoicing, including generating, validating and deliverin
+- [BillDog.io](https://billdog.io/) — In-app subscription paywalls, A/B testing, product analytics, and messaging with SDKs for 
+- [bloglite](https://github.com/rikhuijzer/bloglite) — Micro-blog tool offering built-in syntax highlighting, mobile publishing and more (alterna
+- [BootForm](https://bootform.com/) — Form backend for builders. Free plan: 250 submissions a month with unlimited forms. Email 
+- [Bottle Rocket](https://bottle-rocket.app/) — Document scanning and management application, compatible with Rocketbook and Scribzee form
+- [BylineCV](https://bylinecv.com/) — Form-based CV and cover letter builder to pass ATS filters and organize all your versions 
+- [Cabin](https://withcabin.com) — Privacy-first, cookie-free web analytics with per-page carbon estimates and an MCP server 
+- [Canjean](https://canjean.com/exchange-rate-api) — Free exchange rate API for 150+ currencies in JSON, CSV and plain text, no API key or sign
+- [Canva](https://www.canva.com/mockups/) — Create product mockups, 200 free mockups.
+- [CellarBoss](https://cellarboss.org) — Wine inventory management system. ([Source Code](https://github.com/CellarBoss/cellarboss)
+- [CertAvert](https://certavert.com/monitoring) — Monitor SSL/TLS certificates on any port, checks expiry, chain problems, revocation, host 
+- [CheezyPizza](https://www.cheezypizza.in) — Send files directly between browsers using WebRTC. No uploads, no cloud storage, and no mi
+- [Chobble Tickets](https://tickets.chobble.com) — Event ticketing with QR check-in and encrypted attendee records. The complete product is A
+- [Cisco Networking Academy](https://netacad.com/) — Offers free certification-aligned courses in topics like cybersecurity, networking, and Py
+- [cocalc.ai](https://cocalc.ai/) — Collaborative calculation in the cloud. Browser access to full Ubuntu with built-in collab
+- [cors.dev](https://cors.dev/) — CORS proxy for calling third-party APIs from frontend code: prefix any HTTPS URL with `htt
+- [CustomJS](https://www.customjs.space) — HTML to PDF or PDF to PNG/Text & PDF merging/extraction/merging APIs. Free tier has 600 ca
+- [CyberShield Studio](https://cybershieldstudio.com/) — Security monitoring for e-commerce store operators and developers. Weekly scans for JavaSc
+- [DashBeam](https://dashbeam.net) — File transfer tool with peer-to-peer networking, letting you transfer any file with any si
+- [datannur](https://datannur.com) — Lightweight data catalog for documenting and exploring structured data files and databases
+- [Datasense](https://usedatasense.com/) — Web analytics with JavaScript error tracking, goals, and revenue attribution. Free plan: 1
+- [Dexio](https://dexio.wiki) — Shared wiki that all your AI agents read and write, so each one starts with the same conte
+- [disban.io](https://disban.io/) — Protect user signups from disposable emails, or just validate an email against disposable 
+- [DMARCmetric](https://dmarcmetric.com/) — DMARC report monitoring with named sending sources, SPF/DKIM alignment and plain-English s
+- [DNSvivo](https://dnsvivo.com/) — Free managed DNS with automatic failover, weighted load balancing, and Dynamic DNS (DDNS).
+- [DocSpring](https://docspring.com) — Fill out PDF forms, generate PDFs and Word documents, and collect e-signatures. Free devel
+- [DomainCanary](https://domaincanary.com) — DMARC enforcement service that protects your domain from email spoofing. First domain is f
+- [drawDB](https://www.drawdb.app) — Browser-based visual and DBML database diagram editor and SQL generator for MySQL, Postgre
+- [Dynamic Document API](https://dynamicdocumentapi.com/) — Turn data into pixel-perfect PDFs and images. The free plan includes 50 renders per month 
+- [Eclipse Che](https://www.eclipse.dev/che/) — Web-based and Kubernetes-Native IDE for Developer Teams with multi-language support. Open 
+- [eForward](https://eforward.com) — Email forwarding for custom domains. Free plan includes 1 domain, 1 mailbox, 10 aliases (c
+- [Enchant](https://www.enchant.com) — Omnichannel customer communication platform. Free tier includes chat widgets, email newsle
+
+**Possibly gone (missing on this run, 67):**
+- [CustomJS](https://www.customjs.io) — seen 2026-09-25, streak 1
+- [Compare JSON](https://comparejson.com) — seen 2026-09-25, streak 1
+- [DocPenny](https://docpenny.com) — seen 2026-09-25, streak 1
+- [ProxySentry](https://proxysentry.io/) — seen 2026-09-25, streak 1
+- [HeySpace](https://hey.space) — seen 2026-09-25, streak 1
+- [Notion](https://www.notion.so/) — seen 2026-09-25, streak 1
+- [Quidlo Timesheets](https://www.quidlo.com/timesheets) — seen 2026-09-25, streak 1
+- [Revolt.chat](https://revolt.chat/) — seen 2026-09-25, streak 1
+- [Tugboat](https://tugboat.qa) — seen 2026-09-25, streak 1
+- [zoom.us](https://zoom.us/) — seen 2026-09-25, streak 1
+- [Zeitio](https://zeitio.com/) — seen 2026-09-25, streak 1
+- [sonarcloud.io](https://sonarcloud.io) — seen 2026-09-25, streak 1
+- [buddy.works](https://buddy.works/) — seen 2026-09-25, streak 1
+- [Squash Labs](https://www.squash.io/) — seen 2026-09-25, streak 1
+- [Terrateam](https://terrateam.io) — seen 2026-09-25, streak 1
+- [Datree](https://www.datree.io/) — seen 2026-09-25, streak 1
+- [Dependabot](https://dependabot.com/) — seen 2026-09-25, streak 1
+- [engagespot.co](https://engagespot.co/) — seen 2026-09-25, streak 1
+- [supaguard.app](https://supaguard.app/) — seen 2026-09-25, streak 1
+- [Whitespace](https://whitespace.dev) — seen 2026-09-25, streak 1
+- [CommandBar](https://www.commandbar.com/) — seen 2026-09-25, streak 1
+- [Cisco Networking Academy, Skills for All](https://skillsforall.com/) — seen 2026-09-25, streak 1
+- [Bump](https://bump.email/) — seen 2026-09-25, streak 1
+- [Mailcheck.ai](https://www.mailcheck.ai/) — seen 2026-09-25, streak 1
+- [trashmail.com](https://www.trashmail.com) — seen 2026-09-25, streak 1
+- [Hypertune](https://www.hypertune.com) — seen 2026-09-25, streak 1
+- [Font of web](https://fontofweb.com/) — seen 2026-09-25, streak 1
+- [staticforms.xyz](https://www.staticforms.xyz/) — seen 2026-09-25, streak 1
+- [WaiverStevie.com](https://waiverstevie.com) — seen 2026-09-25, streak 1
+- [Audio Enhancer](https://voice-clone.org/tools/audio-enhancer) — seen 2026-09-25, streak 1
+- [ovh.ie](https://www.ovh.ie/ssl-gateway/) — seen 2026-09-25, streak 1
+- [Apply.build](https://apply.build/) — seen 2026-09-25, streak 1
+- [Deno Deploy](https://deno.com/deploy) — seen 2026-09-25, streak 1
+- [Val Town](https://www.val.town) — seen 2026-09-25, streak 1
+- [ETLR](https://etlr.io) — seen 2026-09-25, streak 1
+- [readthedocs.org](https://readthedocs.org/) — seen 2026-09-25, streak 1
+- [LocalCert](https://localcert.net) — seen 2026-09-25, streak 1
+- [sslip.io](https://sslip.io/) — seen 2026-09-25, streak 1
+- [Neon](https://neon.tech/) — seen 2026-09-25, streak 1
+- [SeaTable](https://seatable.io/) — seen 2026-09-25, streak 1
+
+Registry: 11 verified live, 0 flagged for review (none).
+
 ## 2026-09-25
 
 Observed: 2429 entries across free-for-dev, awesome-selfhosted.

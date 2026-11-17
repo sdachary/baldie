@@ -2,7 +2,7 @@
   "schema": 1,
   "title": "baldie free-tier registry",
   "description": "Curated, person-maintained registry of free / free-tier / self-hostable services that baldie consults before recommending anything. Refreshed weekly by scripts/refresh-free-tier.js (see data/changelog.md). Fields that end in _verified are only restamped when the service is re-seen upstream; anything left null has not been verified on this mechanism.",
-  "updated": "2026-09-25",
+  "updated": "2026-11-17",
   "services": [
     {
       "name": "Cloudflare Pages",
@@ -12,7 +12,7 @@
       "usage_ceiling": "free plan, no credit card",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "Cloudflare Workers",
@@ -22,7 +22,7 @@
       "usage_ceiling": "requests/day",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "GitHub Actions",
@@ -32,7 +32,7 @@
       "usage_ceiling": "minutes/month",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "Vercel",
@@ -42,7 +42,7 @@
       "usage_ceiling": "bandwidth + function exec/mo",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "Supabase",
@@ -52,7 +52,7 @@
       "usage_ceiling": "pauses when idle 7 days",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "Neon",
@@ -60,9 +60,10 @@
       "category": "database",
       "free_offer": "Branching Postgres, 0.5GB storage, 190 compute hrs/mo, autosuspend",
       "usage_ceiling": "compute hours/month",
-      "status": "live",
+      "status": "flagged",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-09-25",
+      "missing_streak": 2
     },
     {
       "name": "Fly.io",
@@ -81,7 +82,7 @@
       "usage_ceiling": "storage + operations",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "Render",
@@ -91,7 +92,7 @@
       "usage_ceiling": "idle spin-down + monthly hours",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "Oracle Cloud Always Free",
@@ -99,9 +100,10 @@
       "category": "vm",
       "free_offer": "2 AMD (E2.1.Micro ×2) + Ampere A1 up to 2 OCPU/12GB total, 200GB block storage, forever",
       "usage_ceiling": "fixed resource caps",
-      "status": "live",
+      "status": "flagged",
       "added": "2026-09-25",
-      "last_verified": "2026-11-09"
+      "last_verified": "2026-11-09",
+      "missing_streak": 2
     },
     {
       "name": "Google Cloud free tier",
@@ -120,7 +122,7 @@
       "usage_ceiling": "12-month credits + always-free",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "Uptime Kuma",
@@ -130,7 +132,7 @@
       "usage_ceiling": "your own hardware",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "Grafana",
@@ -140,7 +142,7 @@
       "usage_ceiling": "series/GB per month",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
     },
     {
       "name": "Gitea",
@@ -150,7 +152,72 @@
       "usage_ceiling": "storage/repos",
       "status": "live",
       "added": "2026-09-25",
-      "last_verified": "2026-09-25"
+      "last_verified": "2026-11-17"
+    },
+    {
+      "name": "SweetUptime",
+      "url": "https://dicloud.net/sweetuptime-server-uptime-monitoring/",
+      "category": "observability",
+      "free_offer": "SweetUptime — free tier available (verify limits at provider)",
+      "usage_ceiling": "check provider pricing page",
+      "status": "live",
+      "added": "2026-11-17",
+      "last_verified": "2026-11-17",
+      "auto_promoted": true,
+      "promotion_source": "free-for-dev",
+      "promotion_weeks_observed": 7
+    },
+    {
+      "name": "anon.li Alias",
+      "url": "https://anon.li/alias",
+      "category": "email",
+      "free_offer": "Open-source self-hosted anon.li Alias, run on your own hardware",
+      "usage_ceiling": "your own hardware",
+      "status": "live",
+      "added": "2026-11-17",
+      "last_verified": "2026-11-17",
+      "auto_promoted": true,
+      "promotion_source": "free-for-dev",
+      "promotion_weeks_observed": 7
+    },
+    {
+      "name": "Proton Mail",
+      "url": "https://proton.me/mail",
+      "category": "email",
+      "free_offer": "Proton Mail — free tier available (verify limits at provider)",
+      "usage_ceiling": "check provider pricing page",
+      "status": "live",
+      "added": "2026-11-17",
+      "last_verified": "2026-11-17",
+      "auto_promoted": true,
+      "promotion_source": "free-for-dev",
+      "promotion_weeks_observed": 7
+    },
+    {
+      "name": "Choreo",
+      "url": "https://wso2.com/choreo/",
+      "category": "paas",
+      "free_offer": "Choreo — free tier available (verify limits at provider)",
+      "usage_ceiling": "check provider pricing page",
+      "status": "live",
+      "added": "2026-11-17",
+      "last_verified": "2026-11-17",
+      "auto_promoted": true,
+      "promotion_source": "free-for-dev",
+      "promotion_weeks_observed": 7
+    },
+    {
+      "name": "namecheap.com",
+      "url": "https://www.namecheap.com/domains/freedns/",
+      "category": "dns",
+      "free_offer": "namecheap.com — free tier available (verify limits at provider)",
+      "usage_ceiling": "check provider pricing page",
+      "status": "live",
+      "added": "2026-11-17",
+      "last_verified": "2026-11-17",
+      "auto_promoted": true,
+      "promotion_source": "free-for-dev",
+      "promotion_weeks_observed": 7
     }
   ]
 }
